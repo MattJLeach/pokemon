@@ -1,0 +1,8 @@
+.list-item {
+  text-align: center;
+}
+
+.list-item .btn {
+  display: block;
+  margin: 20px auto 0;
+}
