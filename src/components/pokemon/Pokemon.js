@@ -19,7 +19,6 @@ const POKEMON_QUERY = gql`
 export class Pokemon extends Component {
   render() {
     let { name } = this.props.match.params;
-    console.log(name)
     return (
       <div>
         <Query query={POKEMON_QUERY} variables={{name}}>
@@ -27,7 +26,6 @@ export class Pokemon extends Component {
             ({ loading, error, data}) => {
               if(loading) return <Spinner />
               if(error) console.log(error)
-              console.log(data)
               const { image, name, number, resistant, types, weaknesses } = data.pokemon;
               return (
                 <div className="text-center">
